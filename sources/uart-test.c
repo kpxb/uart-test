@@ -14,9 +14,9 @@ int main(int argc, char *argv[])
 	u_fd = fopen(uart5, "r+");
 	if(u_fd < 0)
 	{
-      		printf("Fail to Open uart5\n");
-     		exit(1);
-   	}
+		printf("Fail to Open uart5\n");
+		exit(1);
+	}
 	else
 	{
 		printf("Success to Open uart5\n");
