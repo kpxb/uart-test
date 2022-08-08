@@ -8,26 +8,25 @@ int main(int argc, char *argv[])
 {
 	FILE *u_fd;
 	char buff[512];
-	
+
 	printf("Opening uart5 ...\n");
 
 	u_fd = fopen(uart5, "r+");
-	if(u_fd < 0)
+	if (u_fd < 0)
 	{
-		printf("Fail to Open uart5\n");
+		printf("Fail to open uart5\n");
 		exit(1);
 	}
 	else
 	{
-		printf("Success to Open uart5\n");
+		printf("Success to open uart5\n");
 	}
 
-	while(1)
+	while (1)
 	{
-		if(fread(buff, 512, 1, u_fd))
+		if (fread(buff, 512, 1, u_fd))
 		{
 			fwrite(buff, 512, 1, u_fd);
 		}
-
 	}
-}	
+}
